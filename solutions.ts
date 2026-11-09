@@ -1,8 +1,6 @@
-
 function multiplyValue(value: number, multiplier: number = 2): number {
   return value * multiplier;
 }
-
 
 function processInput(input: string | number | boolean): string | number {
   if (typeof input === "string") {
@@ -14,7 +12,6 @@ function processInput(input: string | number | boolean): string | number {
   return input ? "Active" : "Inactive";
 }
 
-
 type Coordinate = readonly [number, number, string];
 
 function formatCoordinate(coord: Coordinate): string {
@@ -22,11 +19,9 @@ function formatCoordinate(coord: Coordinate): string {
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
-
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   return arrays.flat();
 }
-
 
 interface Course {
   title: string;
@@ -40,11 +35,9 @@ function getPopularCourses(courses: Course[], minStudents: number): Course[] {
   );
 }
 
-
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
   return items.map((item) => item[key]);
 }
-
 
 class Employee {
   protected name: string;
@@ -72,7 +65,6 @@ class Manager extends Employee {
     return `Manager of ${this.department}: ${this.name}`;
   }
 }
-
 
 async function validateAgeAsync(age: number): Promise<string> {
   if (age >= 18) {
